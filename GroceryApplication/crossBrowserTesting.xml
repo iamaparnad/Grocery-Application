@@ -1,0 +1,19 @@
+<suite name="CrossBrowserTesting">
+   
+    <test name="ChromeTest">
+     <parameter name="browser" value="Chrome">
+    </parameter>
+        <classes>
+            <class name="testscript.SubcategoryTest">
+            </class>
+        </classes>
+    </test>
+   <test name="EdgeTest" thread-count="5">
+   <parameter name="browser" value="Edge">
+    </parameter>
+        <classes>
+            <class name="testscript.ManageNewsTest">
+            </class>
+            </classes>
+    </test>
+</suite>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MyTestsuite]">
+  <parameter name="browser" value="Chrome"/>
+  <test thread-count="5" name="myTest(failed)">
+    <classes>
+      <class name="testscript.ManageNewsTest">
+        <methods>
+          <include name="VerifyUserIsAbleToSearchExcistingNews"/>
+          <include name="initializeBrowser"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- testscript.ManageNewsTest -->
+    </classes>
+  </test> <!-- myTest(failed) -->
+</suite> <!-- Failed suite [MyTestsuite] -->

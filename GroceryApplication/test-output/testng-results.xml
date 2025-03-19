@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-18T20:28:28 IST" name="MyTestsuite" finished-at="2025-03-18T20:28:41 IST" duration-ms="13299">
+    <groups>
+    </groups>
+    <test started-at="2025-03-18T20:28:28 IST" name="myTest" finished-at="2025-03-18T20:28:41 IST" duration-ms="13299">
+      <class name="testscript.ManageNewsTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@198b6731]" started-at="2025-03-18T20:28:28 IST" name="initializeBrowser" finished-at="2025-03-18T20:28:35 IST" duration-ms="6680" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyUserIsAbleToAddNewNews()[pri:0, instance:testscript.ManageNewsTest@198b6731]" started-at="2025-03-18T20:28:35 IST" name="verifyUserIsAbleToAddNewNews" finished-at="2025-03-18T20:28:41 IST" duration-ms="6486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToAddNewNews -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@198b6731]" started-at="2025-03-18T20:28:41 IST" name="driverQuit" finished-at="2025-03-18T20:28:41 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserIsAbleToAddNewNews status=SUCCESS method=ManageNewsTest.verifyUserIsAbleToAddNewNews()[pri:0, instance:testscript.ManageNewsTest@198b6731] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testscript.ManageNewsTest -->
+    </test> <!-- myTest -->
+  </suite> <!-- MyTestsuite -->
+</testng-results>
