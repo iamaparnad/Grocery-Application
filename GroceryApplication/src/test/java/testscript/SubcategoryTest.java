@@ -31,6 +31,14 @@ public class SubcategoryTest extends BaseClass {
 		boolean isAlertPresent = subcategory.isAlertDisplayed();
 		Assert.assertTrue(isAlertPresent, Constant.sc_verifyAddNewSubcategoryWithValidDetails);
 	}
+	@Test
+	public void verifyUserIsAbleToEditItem()
+	{
+		Subcategory subcategory = new Subcategory(driver);
+		subcategory.clickOnEditButton();
+		boolean isAlertPresent = subcategory.isAlertDisplayed();
+		Assert.assertTrue(isAlertPresent, Constant.sc_verifyUserIsAbleToEditItem);
+	}
 
 	@Test
 	public void VerifyUserIsAbleToDeleteItem() {
@@ -39,6 +47,7 @@ public class SubcategoryTest extends BaseClass {
 		boolean isAlertPresent = subcategory.isAlertDisplayed();
 		Assert.assertTrue(isAlertPresent, Constant.sc_verifyUserIsAbleToDeleteItem);
 	}
+	
 
 	
 }

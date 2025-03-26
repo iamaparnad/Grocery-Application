@@ -23,7 +23,7 @@ public class ManageContactTest extends BaseClass {
 		login = new LoginPage(driver);
 		home = login.loginUsingExcelData();
 		managecontact = home.clickOnManagecontactButton().clickOnNewButton().enterPhoneNumber().enterEmail()
-				.enterAddress().enterDeliveryLimit().enterDeliveryLimit().clickOnUpdateButton().clickOnResetButton();
+				.enterAddress().enterDeliveryLimit().enterDeliveryLimit().clickOnUpdateButton();
 		boolean isAlertPresent = managecontact.isAlertDisplayed();
 		Assert.assertTrue(isAlertPresent, Constant.mc_AddindValidDetailsInContactUsPage);
 

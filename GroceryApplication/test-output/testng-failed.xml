@@ -4,13 +4,15 @@
   <parameter name="browser" value="Chrome"/>
   <test thread-count="5" name="myTest(failed)">
     <classes>
-      <class name="testscript.ManageNewsTest">
+      <class name="testscript.SubcategoryTest">
         <methods>
-          <include name="VerifyUserIsAbleToSearchExcistingNews"/>
           <include name="initializeBrowser"/>
           <include name="driverQuit"/>
+          <include name="verifyAddNewSubcategoryWithValidDetails"/>
+          <include name="VerifyUserIsAbleToDeleteItem"/>
+          <include name="verifyUserIsAbleToEditItem"/>
         </methods>
-      </class> <!-- testscript.ManageNewsTest -->
+      </class> <!-- testscript.SubcategoryTest -->
     </classes>
   </test> <!-- myTest(failed) -->
 </suite> <!-- Failed suite [MyTestsuite] -->

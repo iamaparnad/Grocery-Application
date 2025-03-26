@@ -36,6 +36,8 @@ WaitUtility waitutility=new WaitUtility();
 	WebElement deleteItem;
 	@FindBy(xpath = "//span[@class='badge bg-success']")
 	WebElement statusButton;
+	@FindBy(xpath="//i[@class='fas fa-edit']")WebElement editButton;
+	@FindBy(xpath="//button[@class='btn btn-danger']")WebElement updateButton;
 
 	public Subcategory clickOnNewButton() {
 		newButton.click();
@@ -73,6 +75,13 @@ WaitUtility waitutility=new WaitUtility();
 		deleteItem.click();
 		driver.switchTo().alert().accept();
 	}
+	public void clickOnEditButton() {
+		editButton.click();
+		pageutility.selectDropdownwithVisibleText(categoryDropDown, "Fresh_fruits");
+		subcategoryTextBox.sendKeys("Kiwi" + pageutility.generateCurrentDateAndTime());
+		updateButton.click();
+		}
+
 
 	public void clickOnStatusButton() {
 		statusButton.click();

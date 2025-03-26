@@ -29,10 +29,11 @@ public class ManageNewsTest extends BaseClass {
 	public void VerifyUserIsAbleToSearchNoNExcistingNews() throws IOException {
 		login = new LoginPage(driver);
 		home=login.loginUsingExcelData();
-        managenews=home.clickOnManageNewsButton().searchExistingNews().clickOnsearchButton();
-		boolean isAlertPresent = managenews.isAlertDisplayed();
-		Assert.assertTrue(isAlertPresent, Constant.mn_verifUserSearchingExsistingNews);
+        managenews=home.clickOnManageNewsButton().searchNoNExistingNews().clickOnsearchButton();
+		boolean isAlertPresent = managenews.isResultNotFoundDisplayed();
+		Assert.assertTrue(isAlertPresent, Constant.mn_verifUserSearchingNoNExsistingNews);
 	}
+	
 	@Test
 	public void verifyUserIsAbleToEditNews() throws IOException
 	{

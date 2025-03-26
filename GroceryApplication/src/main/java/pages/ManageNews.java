@@ -1,5 +1,8 @@
 package pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,7 +37,8 @@ public class ManageNews {
 	WebElement deleteItem;
 	@FindBy(xpath="//i[@class='fas fa-edit']")WebElement editButton;
 	@FindBy(xpath="//textarea[@id='news']")WebElement textArea;
-	
+	@FindBy(xpath="//span[@id='res']")WebElement resultNotFound;
+	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']//tr//td[1]")WebElement tableDataFound;
 
 	public ManageNews clickOnNewButton() {
 		newButton.click();
@@ -43,11 +47,16 @@ public class ManageNews {
 		return this;
 	}
 
-	public ManageNews searchExistingNews() {
+	public ManageNews searchNoNExistingNews() {
 		searchButton.click();
-		newsTextBox.sendKeys("Latest News 2025");
+		newsTextBox.sendKeys("Latest News 2020");
 		searchAlongWithNewsTextBox.click();
+		
 		return this;
+	}
+	public boolean isResultNotFoundDisplayed()
+	{
+		return resultNotFound.isDisplayed();
 	}
 
 	public ManageNews clickOnsearchButton() {

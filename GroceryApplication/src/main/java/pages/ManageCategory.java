@@ -38,6 +38,8 @@ public class ManageCategory {
 	WebElement resetButton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement alertMsg;
+	@FindBy(xpath="//input[@id='main_img']")
+	WebElement chooseFile;
 
 	public ManageCategory clickOnNewButton() {
 		newButton.click();
@@ -57,18 +59,17 @@ public class ManageCategory {
 	}
 
 	public ManageCategory chooseImage() {
-		image.click();
+		String filepath = "C:\\Users\\User\\eclipse-workspace\\GroceryApplication\\src\\test\\resources\\Images\\leafy-veg.jpg";
+		chooseFile.sendKeys(filepath);
 		return this;
 	}
 
 	public ManageCategory clickOnRadioButtonForTopMenu() {
 
-		if (!radioButtonTopMenu.isSelected())
-			;
+		if (!radioButtonTopMenu.isSelected());
 		{
-			{
+
 				radioButtonTopMenu.click();
-			}
 
 		}
 		return this;
