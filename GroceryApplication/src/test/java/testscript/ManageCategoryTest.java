@@ -22,7 +22,7 @@ public class ManageCategoryTest extends BaseClass {
 		login = new LoginPage(driver);
 		home = login.loginUsingExcelData();
 		managecategory = home.clickOnManageCategory().clickOnNewButton().enterCategoryName().selectGroup()
-				.chooseImage().clickOnRadioButtonForTopMenu().clickOnRadioButtonForBottomMenu().clickOnSaveButton();
+				.clickOnRadioButtonForTopMenu().clickOnRadioButtonForBottomMenu().clickOnSaveButton();
 		boolean isAlertPresent = managecategory.isAlertDisplayed();
 		Assert.assertTrue(isAlertPresent, Constant.mc_verifUseraddNewCategory);
 	}

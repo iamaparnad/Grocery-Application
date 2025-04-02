@@ -71,6 +71,7 @@ public class ManageNews {
 	{
 		editButton.click();
 		textArea.sendKeys("Latest News"+ pageutility.generateCurrentDateAndTime());
+		saveButton.click();
 		return this;
 	}
 

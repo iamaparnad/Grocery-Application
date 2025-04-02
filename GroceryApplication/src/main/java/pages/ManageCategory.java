@@ -58,12 +58,6 @@ public class ManageCategory {
 		return this;
 	}
 
-	public ManageCategory chooseImage() {
-		String filepath = "C:\\Users\\User\\eclipse-workspace\\GroceryApplication\\src\\test\\resources\\Images\\leafy-veg.jpg";
-		chooseFile.sendKeys(filepath);
-		return this;
-	}
-
 	public ManageCategory clickOnRadioButtonForTopMenu() {
 
 		if (!radioButtonTopMenu.isSelected());
