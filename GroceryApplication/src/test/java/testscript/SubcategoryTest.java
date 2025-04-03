@@ -20,8 +20,8 @@ public class SubcategoryTest extends BaseClass {
 	public void verifyAddNewSubcategoryWithValidDetails() throws IOException {
 		login = new LoginPage(driver);
 		home = login.loginUsingExcelData();
-		subcategory = home.clickOnSubcategoryButton().clickOnNewButton().selectCategoryFromDropdown().enterSubCategory().uploadImage()
-				.clickOnSaveButton();
+		subcategory = home.clickOnSubcategoryButton().clickOnNewButton().selectCategoryFromDropdown().enterSubCategory()
+				.uploadImage().clickOnSaveButton();
 
 //	  subcategory.clickOnNewButton();
 //	  subcategory.selectCategoryFromDropdown();
@@ -31,9 +31,9 @@ public class SubcategoryTest extends BaseClass {
 		boolean isAlertPresent = subcategory.isAlertDisplayed();
 		Assert.assertTrue(isAlertPresent, Constant.sc_verifyAddNewSubcategoryWithValidDetails);
 	}
+
 	@Test
-	public void verifyUserIsAbleToEditItem()
-	{
+	public void verifyUserIsAbleToEditItem() {
 		Subcategory subcategory = new Subcategory(driver);
 		subcategory.clickOnEditButton();
 		boolean isAlertPresent = subcategory.isAlertDisplayed();
@@ -47,7 +47,5 @@ public class SubcategoryTest extends BaseClass {
 		boolean isAlertPresent = subcategory.isAlertDisplayed();
 		Assert.assertTrue(isAlertPresent, Constant.sc_verifyUserIsAbleToDeleteItem);
 	}
-	
 
-	
 }

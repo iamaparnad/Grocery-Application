@@ -15,31 +15,31 @@ public class ManageNewsTest extends BaseClass {
 	LoginPage login;
 	HomePage home;
 	ManageNews managenews;
-	@Test
+
+	@Test(priority = 1, groups = "smoke")
 	public void verifyUserIsAbleToAddNewNews() throws IOException {
 		login = new LoginPage(driver);
-		home=login.loginUsingExcelData();
-        managenews=home.clickOnManageNewsButton().clickOnNewButton();
-        boolean isAlertPresent = managenews.isAlertDisplayed();
+		home = login.loginUsingExcelData();
+		managenews = home.clickOnManageNewsButton().clickOnNewButton();
+		boolean isAlertPresent = managenews.isAlertDisplayed();
 		Assert.assertTrue(isAlertPresent, Constant.mn_verifUserAddNews);
 
 	}
 
-	@Test
+	@Test(priority = 3, groups = "smoke")
 	public void VerifyUserIsAbleToSearchNoNExcistingNews() throws IOException {
 		login = new LoginPage(driver);
-		home=login.loginUsingExcelData();
-        managenews=home.clickOnManageNewsButton().searchNoNExistingNews().clickOnsearchButton();
+		home = login.loginUsingExcelData();
+		managenews = home.clickOnManageNewsButton().searchNoNExistingNews().clickOnsearchButton();
 		boolean isAlertPresent = managenews.isResultNotFoundDisplayed();
 		Assert.assertTrue(isAlertPresent, Constant.mn_verifUserSearchingNoNExsistingNews);
 	}
-	
-	@Test
-	public void verifyUserIsAbleToEditNews() throws IOException
-	{
+
+	@Test(priority = 2, groups = "smoke")
+	public void verifyUserIsAbleToEditNews() throws IOException {
 		login = new LoginPage(driver);
-		home=login.loginUsingExcelData();
-        managenews=home.clickOnManageNewsButton().clickOnEditButton(); 
+		home = login.loginUsingExcelData();
+		managenews = home.clickOnManageNewsButton().clickOnEditButton();
 		boolean isAlertPresent = managenews.isAlertDisplayed();
 		Assert.assertTrue(isAlertPresent, Constant.mn_verifUserEditingNews);
 	}

@@ -1,0 +1,14 @@
+<suite name="MyTestsuite">
+	<test name="groupTest">
+		<groups>
+			<run>
+				<exclude name="smoke">
+				</exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="testscript.ManageNewsTest">
+			</class>
+		</classes>
+	</test>
+</suite>

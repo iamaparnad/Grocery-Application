@@ -1,24 +1,25 @@
 <suite name="MyTestsuite">
-<parameter name="browser" value="Chrome">
-</parameter>
+	<parameter name="browser" value="Chrome">
+	</parameter>
 	<test name="myTest">
-	<!--<listeners>
-	  <listener class-name="listeners.Listners"></listener>
-	<listener class-name="listeners.RetryListener">
-	</listener>
-	</listeners>-->
-	<classes>
-	<!--  <class name="testscript.LoginTest">
-	</class>
-	<class name="testscript.SubcategoryTest">
-	</class>
-	<class name="testscript.ManageContactTest">
-	</class>
-	<class name="testscript.ManageNewsTest">
-	</class>-->
-	<class name="testscript.SubcategoryTest">
-	</class>
-	</classes>
+		<listeners>
+			<listener class-name="listeners.Listners"></listener>
+			<listener class-name="listeners.RetryListener">
+			</listener>
+		</listeners>
+		<classes>
+			<class name="testscript.LoginTest">
+			</class>
+			<class name="testscript.SubcategoryTest">
+			</class>
+			<class name="testscript.ManageContactTest">
+			</class>
+			<class name="testscript.ManageNewsTest">
+			</class>
+			-->
+			<class name="testscript.SubcategoryTest">
+			</class>
+		</classes>
 	</test>
-	</suite>
+</suite>
 	

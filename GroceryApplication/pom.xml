@@ -58,8 +58,8 @@
 			<artifactId>log4j-api</artifactId>
 			<version>2.17.2</version>
 		</dependency>
-		</dependencies>
-		<build>
+	</dependencies>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -77,10 +77,10 @@
 
 				<configuration>
 					<suiteXmlFiles>
-<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>	
+	</build>
 </project>

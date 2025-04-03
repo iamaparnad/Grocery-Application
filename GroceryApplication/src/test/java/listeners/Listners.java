@@ -1,7 +1,5 @@
 package listeners;
 
-
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -16,10 +14,10 @@ import utilities.ExtentReportUtility;
 
 public class Listners extends BaseClass implements ITestListener {
 	ExtentTest test;
-	ExtentReports extent = ExtentReportUtility.createExtentReports();//calling
+	ExtentReports extent = ExtentReportUtility.createExtentReports();// calling
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
-	public void onTestStart(ITestResult result) {//overriding
+	public void onTestStart(ITestResult result) {// overriding
 		ITestListener.super.onTestStart(result);
 		test = extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
@@ -49,8 +47,7 @@ public class Listners extends BaseClass implements ITestListener {
 		} catch (IllegalArgumentException e) {
 
 			e.printStackTrace();
-		}
-catch (NoSuchFieldException e) {
+		} catch (NoSuchFieldException e) {
 
 			e.printStackTrace();
 		} catch (SecurityException e) {
@@ -61,9 +58,7 @@ catch (NoSuchFieldException e) {
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
 					.get(result.getInstance());
-		} 
-		catch (Exception e) 
-		{
+		} catch (Exception e) {
 		}
 	}
 
@@ -85,8 +80,8 @@ catch (NoSuchFieldException e) {
 		ITestListener.super.onStart(context);
 	}
 
-public void onFinish(ITestContext context) {   
-	ITestListener.super.onFinish(context);  
-	extent.flush();  
-}
+	public void onFinish(ITestContext context) {
+		ITestListener.super.onFinish(context);
+		extent.flush();
 	}
+}
